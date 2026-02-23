@@ -33,6 +33,9 @@ let cprologue = [
   "#include <stdio.h>";
   "#include <stddef.h>";
   "#include \"ctypes_cstubs_internals.h\"";
+  "#ifdef alloc";
+  "#undef alloc";
+  "#endif";
   "";
   "int main(void)";
   "{";
@@ -44,9 +47,6 @@ let cepilogue = [
 let mlprologue = [
   "[@@@warning \"-9-27\"]";
   "include Ctypes";
-  "#ifdef alloc";
-  "#undef alloc";
-  "#endif";
   "let lift x = x";
   "open Ctypes_static";
 ]
