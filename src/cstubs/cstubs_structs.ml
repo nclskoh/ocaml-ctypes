@@ -46,7 +46,7 @@ let mlprologue = [
   "include Ctypes";
   "#ifdef alloc";
   "#undef alloc";
-  "#endif"
+  "#endif";
   "let lift x = x";
   "open Ctypes_static";
 ]
